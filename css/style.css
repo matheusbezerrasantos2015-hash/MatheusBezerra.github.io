@@ -68,19 +68,18 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 18px;
+    gap: 15px;
     margin-bottom: 18px;
 }
 
-#social-container li a {
-    color: var(--main-color);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color .2s;
+#whatsapp{
+    font-size: 2rem;
+    color: green;
 }
 
-#social-container li a:hover {
-    color: var(--accent-color);
+#linkedin{
+    font-size: 2rem;
+    color: blue;
 }
 
 #email-container {

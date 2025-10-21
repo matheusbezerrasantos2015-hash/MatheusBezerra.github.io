@@ -251,6 +251,127 @@ body {
     gap: 16px;
 }
 
+/* ===== SEÇÃO DE PROJETOS ===== */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    flex: 1 1 45%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.project-card h3 {
+    margin: 8px 0;
+    color: var(--accent-color);
+}
+
+.project-card p {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.project-btn {
+    background: var(--main-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== BARRA DE HABILIDADES ===== */
+.skills-bar-container {
+    margin-bottom: 28px;
+}
+
+.skill {
+    margin-bottom: 12px;
+}
+
+.skill p {
+    font-size: 0.9rem;
+    color: var(--heading-color);
+    margin-bottom: 4px;
+}
+
+.bar {
+    background: var(--border-color);
+    border-radius: 6px;
+    height: 10px;
+    width: 100%;
+}
+
+.progress {
+    background: var(--accent-color);
+    height: 100%;
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+}
+
+/* ===== BOTÃO DE DOWNLOAD CV ===== */
+#btn-cv {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #000;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    transition: all 0.3s ease;
+}
+
+#btn-cv:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 800px) {
+    .projects-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+    }
+
+    .skills-bar-container {
+        gap: 12px;
+    }
+}
+
 /* Cards de habilidades */
 .skills-box {
     border-radius: 10px;
@@ -343,5 +464,63 @@ body {
 
     .clock-display {
         font-size: 1.8rem;
+    }
+}
+
+/* ===== FOOTER ===== */
+#footer {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 20px 10px;
+    text-align: center;
+    color: var(--muted-text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--main-color);
+}
+
+/* ===== ANIMAÇÕES SUAVES AO SCROLL ===== */
+
+/* Estado inicial dos elementos (invisíveis) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando aparecem na tela */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsivo para footer */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
     }
 }

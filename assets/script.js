@@ -97,3 +97,20 @@ window.addEventListener('scroll', checkSkillsVisibility);
 
 // Inicializa a animação no carregamento
 checkSkillsVisibility();
+
+// ===== ANIMAÇÃO AO SCROLL =====
+// Detecta quando os elementos com classe "fade-in" entram na tela
+const fadeEls = document.querySelectorAll('.fade-in');
+
+function fadeInOnScroll() {
+  fadeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', fadeInOnScroll);
+window.addEventListener('load', fadeInOnScroll);
+

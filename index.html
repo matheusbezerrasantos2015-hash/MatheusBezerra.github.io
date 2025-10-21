@@ -5,10 +5,8 @@
     <meta charset="UTF-8" /> <!-- Define codificação de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade -->
     <title>Portfólio Matheus-Bezerra</title> <!-- Título do site -->
-
     <!-- Fonte Google Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-
     <!-- CSS externo -->
     <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -16,22 +14,17 @@
 <body>
     <!-- Botão fixo para alternar tema dark/light -->
     <button id="theme-toggle" aria-label="Alternar tema claro/escuro">🌙</button>
-
     <!-- Container principal dividido em aside (bio) e section (sobre) -->
     <main id="container">
-
         <!-- ===== BIO / LATERAL ===== -->
         <aside id="bio-container">
             <!-- Foto de perfil -->
             <img id="bio-image" src="img/Foto.png" alt="Foto de perfil" />
-
             <!-- Nome do usuário -->
             <h2 id="bio-title">Matheus Gabriel Bezerra</h2>
-
             <!-- Descrição curta / área de estudo -->
             <p class="text">Estudante de <span class="highlight">Desenvolvimento de Software Multiplataforma</span></p>
             <p id="welcome-text">Seja bem-vindo!</p>
-
             <!-- Redes sociais -->
             <div id="social-container">
                 <a href="https://wa.me/5519995543911" target="_blank" aria-label="Whatsapp">
@@ -41,14 +34,12 @@
                     <ion-icon name="logo-linkedin" id="linkedin"></ion-icon>
                 </a>
             </div>
-
             <!-- Email -->
             <div id="email-container">
                 <a href="mailto:matheus7gbs@gmail.com">matheus7gbs@gmail.com</a>
             </div>
-
             <!-- ===== RELÓGIO DIGITAL ===== -->
-            <div class="clock-card" role="group" aria-label="Relógio digital">
+            <div class="clock-card" role="group" aria-label="Relógio digital" class="fade-in">
                 <div class="clock-display" id="clock" aria-live="polite">--:--:--</div>
                 <div class="clock-meta">
                     <div class="date" id="date">Carregando...</div>
@@ -59,56 +50,142 @@
                 </div>
             </div>
         </aside>
-
         <!-- ===== SOBRE / PRINCIPAL ===== -->
         <section id="about-container">
             <!-- Nome / título principal -->
-            <h1 id="name">Matheus Gabriel Bezerra</h1>
-            <p id="title"><span class="highlight">Estudante de DSM</span>, apaixonado por Banco de Dados, IA e Cyber
+            <h1 id="name" class="fade-in">Matheus Gabriel Bezerra</h1>
+            <p id="title" class="fade-in"><span class="highlight">Estudante de DSM</span>, apaixonado por Banco de Dados, IA e Cyber
                 Segurança.</p>
-
             <!-- Descrição detalhada -->
-            <p class="description">
+            <p class="description" class="fade-in">
                 Profissional em transição para área de tecnologia, focado em Banco de Dados, Desenvolvimento de Software
                 (Multiplataforma), Cibersegurança
                 e IA. Sempre buscando aprender e superar desafios.
             </p>
-
             <!-- Botão para projetos -->
-            <a href="https://github.com/seugit" id="btn-projects" target="_blank">Ver Projetos</a>
-
+            <a href="https://github.com/matheusbezerrasantos2015-hash" id="btn-projects" target="_blank">Ver Projetos</a>
             <!-- ===== HABILIDADES ===== -->
-            <h2 id="skills-section-title">Habilidades Técnicas</h2>
-            <div class="skills-container">
+            <h2 id="skills-section-title" class="fade-in">Habilidades Técnicas</h2>
+            <div class="skills-container" class="fade-in">
                 <!-- Front-end -->
-                <div class="skills-box">
+                <div class="skills-box" class="fade-in">
                     <p class="skills-title">Front-end</p>
                     <span>HTML5, CSS3, JavaScript</span>
                 </div>
                 <!-- Back-end -->
-                <div class="skills-box">
+                <div class="skills-box" class="fade-in">
                     <p class="skills-title">Back-end</p>
                     <span>Python, C++, PHP</span>
                 </div>
                 <!-- Banco de dados -->
-                <div class="skills-box">
+                <div class="skills-box" class="fade-in">
                     <p class="skills-title">Banco de Dados</p>
                     <span>MySQL</span>
                 </div>
                 <!-- Ferramentas -->
-                <div class="skills-box">
+                <div class="skills-box" class="fade-in"> 
                     <p class="skills-title">Ferramentas</p>
                     <span>Bootstrap, Git e GitHub</span>
                 </div>
             </div>
-        </section>
 
+            <!-- ===== NOVA SEÇÃO: Projetos ===== -->
+            <h2 id="projects-section-title" class="fade-in">Projetos</h2>
+            <div class="projects-container" class="fade-in">
+                <!-- Card de exemplo -->
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Primeiro portifolio. Tecnologia usada: HTML, CSS, JS.</p>
+                    <a href="https://github.com/matheusbezerrasantos2015-hash" target="_blank" class="project-btn">Ver Projeto</a>
+                </div>
+                <div class="project-card">
+                    <img src="img/projeto2.png" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição curta do projeto. Tecnologia usada: Python, MySQL.</p>
+                    <a href="https://github.com/matheusbezerrasantos2015-hash" target="_blank" class="project-btn">Ver Projeto</a>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+
+            <!-- ===== NOVA SEÇÃO: Habilidades com barra de progresso ===== -->
+            <h2 id="skills-bar-section-title" class="fade-in">Habilidades Técnicas (Progresso)</h2>
+            <div class="skills-bar-container" class="fade-in">
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>CSS</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Python</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 35%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Bootstrap</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Git</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Github</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Modelagem de Banco de Dados</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>MySQL</p>
+                    <div class="bar">
+                        <div class="progress" style="width: 5%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ===== BOTÃO DE VER O CV ===== -->
+            <a href="assets/Currículo.pdf" target="_blank" id="btn-cv">Ver Currículo</a>
+        </section>
     </main>
+    <!-- ===== RODAPÉ (FOOTER) ===== -->
+    <footer id="footer" class="fade-in">
+        <div class="footer-content" class="fade-in">
+            <p>© 2025 Matheus Gabriel Bezerra</p>
+            <div class="footer-links">
+                <a href="mailto:matheus7gbs@gmail.com" target="_blank">Email</a>
+                <a href="https://github.com/seugit" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/matheus-bezerra" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- ===== ICONES ION ===== -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
     <!-- JS do portfólio -->
     <script src="assets/script.js"></script>
 </body>

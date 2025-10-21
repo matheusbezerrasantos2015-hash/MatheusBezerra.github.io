@@ -1,0 +1,347 @@
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+    --main-color: #7c3aed;
+    --accent-color: #03dac6;
+    --bg-color: #0f111a;
+    --card-bg: #161822;
+    --border-color: #23263a;
+    --text-color: #e3e6ea;
+    --muted-text: #9ba1b0;
+    --heading-color: #ffffff;
+    --radius: 14px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Tema claro */
+:root.light {
+    --bg-color: #f8f9fb;
+    --card-bg: #ffffff;
+    --border-color: #e3e6ea;
+    --text-color: #1a1a1a;
+    --muted-text: #555555;
+    --heading-color: #222222;
+}
+
+/* ===== BODY ===== */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* ===== BOTÃO DE TEMA FIXO ===== */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background: var(--card-bg);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#theme-toggle:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+#container {
+    display: flex;
+    flex-direction: row;
+    max-width: 980px;
+    margin: 48px auto;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* ===== BIO / ASIDE ===== */
+#bio-container {
+    flex: 1 1 25%;
+    background: #11131d;
+    text-align: center;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--border-color);
+}
+
+#bio-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 18px;
+    transition: transform 0.3s ease;
+}
+
+#bio-image:hover {
+    transform: scale(1.05);
+}
+
+#bio-title {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.text,
+#welcome-text {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+#welcome-text {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+#social-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+#social-container a ion-icon {
+    font-size: 1.9rem;
+    color: var(--accent-color);
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#social-container a ion-icon:hover {
+    transform: translateY(-4px);
+    color: var(--main-color);
+}
+
+#email-container a {
+    color: var(--muted-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#email-container a:hover {
+    color: var(--accent-color);
+}
+
+/* ===== RELÓGIO DIGITAL ===== */
+.clock-card {
+    background: linear-gradient(145deg, #181b27, #1f2230);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem 1.3rem;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+.clock-display {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.clock-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--muted-text);
+}
+
+.controls {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+.btn.active {
+    background: var(--accent-color);
+    color: #000;
+    font-weight: 600;
+}
+
+/* ===== SOBRE / SECTION ===== */
+#about-container {
+    flex: 1 1 75%;
+    padding: 48px 42px;
+}
+
+#name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 4px;
+}
+
+#title {
+    color: var(--accent-color);
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.description {
+    color: var(--muted-text);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+#btn-projects {
+    background: var(--main-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#btn-projects:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* ===== HABILIDADES ===== */
+#skills-section-title {
+    font-size: 1.1rem;
+    color: var(--heading-color);
+    margin: 28px 0 14px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Cards de habilidades */
+.skills-box {
+    border-radius: 10px;
+    padding: 16px;
+    flex: 1 1 45%;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    background: #1a1d2b;
+    /* escuro por padrão */
+    color: var(--text-color);
+    /* texto principal */
+}
+
+.skills-box:hover {
+    transform: translateY(-3px);
+}
+
+.skills-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cor do título dentro do card */
+.skills-title {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Tema claro: adapta o fundo e o texto */
+:root.light .skills-box {
+    background: #f0f0f0;
+    /* fundo claro */
+    color: #1a1a1a;
+    /* texto escuro */
+}
+
+:root.light .skills-title {
+    color: var(--main-color);
+    /* título com destaque */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 800px) {
+    #container {
+        flex-direction: column;
+        max-width: 95vw;
+        margin: 24px auto;
+    }
+
+    #bio-container,
+    #about-container {
+        flex: 1 1 100%;
+        padding: 20px;
+        border: none;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .clock-card {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    #name {
+        font-size: 1.6rem;
+    }
+
+    #title,
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .clock-display {
+        font-size: 1.8rem;
+    }
+}

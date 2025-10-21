@@ -1,60 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define idioma do site -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Matheus-Bezerra</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" /> <!-- Define codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade -->
+    <title>Portfólio Matheus-Bezerra</title> <!-- Título do site -->
+
+    <!-- Fonte Google Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
+    <!-- Botão fixo para alternar tema dark/light -->
+    <button id="theme-toggle" aria-label="Alternar tema claro/escuro">🌙</button>
+
+    <!-- Container principal dividido em aside (bio) e section (sobre) -->
     <main id="container">
+
+        <!-- ===== BIO / LATERAL ===== -->
         <aside id="bio-container">
-            <img id="bio-image" src="img/Foto.png" alt="Foto de perfil">
+            <!-- Foto de perfil -->
+            <img id="bio-image" src="img/Foto.png" alt="Foto de perfil" />
+
+            <!-- Nome do usuário -->
             <h2 id="bio-title">Matheus Gabriel Bezerra</h2>
+
+            <!-- Descrição curta / área de estudo -->
             <p class="text">Estudante de <span class="highlight">Desenvolvimento de Software Multiplataforma</span></p>
-            <p id="welcome-text">Seja bem vindo!</p>
+            <p id="welcome-text">Seja bem-vindo!</p>
+
+            <!-- Redes sociais -->
             <div id="social-container">
-                <ion-icon name="logo-whatsapp" id="whatsapp"><a href="(19) 99554-3911"></a></ion-icon>
-                <ion-icon name="logo-linkedin" id="linkedin"><a href="www.linkedin.com/in/matheus-bezerra"></a></ion-icon>
+                <a href="https://wa.me/5519995543911" target="_blank" aria-label="Whatsapp">
+                    <ion-icon name="logo-whatsapp" id="whatsapp"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/matheus-bezerra" target="_blank" aria-label="LinkedIn">
+                    <ion-icon name="logo-linkedin" id="linkedin"></ion-icon>
+                </a>
             </div>
+
+            <!-- Email -->
             <div id="email-container">
-                <a href="matheus7gbs@gmail.com">matheus7gbs@gmail.com</a>
+                <a href="mailto:matheus7gbs@gmail.com">matheus7gbs@gmail.com</a>
+            </div>
+
+            <!-- ===== RELÓGIO DIGITAL ===== -->
+            <div class="clock-card" role="group" aria-label="Relógio digital">
+                <div class="clock-display" id="clock" aria-live="polite">--:--:--</div>
+                <div class="clock-meta">
+                    <div class="date" id="date">Carregando...</div>
+                    <div class="controls">
+                        <button class="btn active" id="toggle24">24h</button>
+                        <button class="btn" id="toggle12">12h</button>
+                    </div>
+                </div>
             </div>
         </aside>
+
+        <!-- ===== SOBRE / PRINCIPAL ===== -->
         <section id="about-container">
+            <!-- Nome / título principal -->
             <h1 id="name">Matheus Gabriel Bezerra</h1>
-            <p id="title"><span class="highlight">Estudante de DSM</span>, apaixonado por Banco de dados, IA e Cyber Segurança.</p>
+            <p id="title"><span class="highlight">Estudante de DSM</span>, apaixonado por Banco de Dados, IA e Cyber
+                Segurança.</p>
+
+            <!-- Descrição detalhada -->
             <p class="description">
-                Profissional em transição para área de tecnologia, focado em Banco de dados, Desenvolvimento de software (Multiplataforma), cibersegurança
+                Profissional em transição para área de tecnologia, focado em Banco de Dados, Desenvolvimento de Software
+                (Multiplataforma), Cibersegurança
                 e IA. Sempre buscando aprender e superar desafios.
             </p>
+
+            <!-- Botão para projetos -->
             <a href="https://github.com/seugit" id="btn-projects" target="_blank">Ver Projetos</a>
+
+            <!-- ===== HABILIDADES ===== -->
             <h2 id="skills-section-title">Habilidades Técnicas</h2>
             <div class="skills-container">
+                <!-- Front-end -->
                 <div class="skills-box">
                     <p class="skills-title">Front-end</p>
                     <span>HTML5, CSS3, JavaScript</span>
                 </div>
+                <!-- Back-end -->
                 <div class="skills-box">
                     <p class="skills-title">Back-end</p>
                     <span>Python, C++, PHP</span>
                 </div>
+                <!-- Banco de dados -->
                 <div class="skills-box">
                     <p class="skills-title">Banco de Dados</p>
                     <span>MySQL</span>
                 </div>
+                <!-- Ferramentas -->
                 <div class="skills-box">
                     <p class="skills-title">Ferramentas</p>
-                    <span>Bootstrap, Git e Github</span>
+                    <span>Bootstrap, Git e GitHub</span>
                 </div>
             </div>
         </section>
+
     </main>
+
+    <!-- ===== ICONES ION ===== -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- JS do portfólio -->
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
